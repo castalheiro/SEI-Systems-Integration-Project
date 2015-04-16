@@ -1,0 +1,5 @@
+C:\Tutorial\Lessons\E-commerce\E-commerce\bin\Debug\E-commerce.dll.config
+C:\Tutorial\Lessons\E-commerce\E-commerce\bin\Debug\E-commerce.dll
+C:\Tutorial\Lessons\E-commerce\E-commerce\bin\Debug\E-commerce.pdb
+C:\Tutorial\Lessons\E-commerce\E-commerce\obj\Debug\E-commerce.dll
+C:\Tutorial\Lessons\E-commerce\E-commerce\obj\Debug\E-commerce.pdb
