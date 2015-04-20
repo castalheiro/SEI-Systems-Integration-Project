@@ -566,20 +566,20 @@ namespace E_commerce
                 E_commerceOrchestration __svc__ = (E_commerceOrchestration)_service;
                 __E_commerceOrchestration_root_0 __ctx0__ = (__E_commerceOrchestration_root_0)(__svc__._stateMgrs[0]);
 
-                if (__svc__.PortOrchOutput != null)
+                if (__svc__.PortPaymentRequest != null)
                 {
-                    __svc__.PortOrchOutput.Close(this, null);
-                    __svc__.PortOrchOutput = null;
+                    __svc__.PortPaymentRequest.Close(this, null);
+                    __svc__.PortPaymentRequest = null;
                 }
                 if (__svc__.PortOrchInput != null)
                 {
                     __svc__.PortOrchInput.Close(this, null);
                     __svc__.PortOrchInput = null;
                 }
-                if (__svc__.PortPaymentRequest != null)
+                if (__svc__.PortOrchOutput != null)
                 {
-                    __svc__.PortPaymentRequest.Close(this, null);
-                    __svc__.PortPaymentRequest = null;
+                    __svc__.PortOrchOutput.Close(this, null);
+                    __svc__.PortOrchOutput = null;
                 }
                 base.Finally();
             }
@@ -623,6 +623,11 @@ namespace E_commerce
                 __E_commerceOrchestration_1 __ctx1__ = (__E_commerceOrchestration_1)(__svc__._stateMgrs[1]);
                 __E_commerceOrchestration_root_0 __ctx0__ = (__E_commerceOrchestration_root_0)(__svc__._stateMgrs[0]);
 
+                if (__ctx1__ != null && __ctx1__.__msgPaymentConfirmation != null)
+                {
+                    __ctx1__.UnrefMessage(__ctx1__.__msgPaymentConfirmation);
+                    __ctx1__.__msgPaymentConfirmation = null;
+                }
                 if (__ctx1__ != null && __ctx1__.__msgPaymentRequest != null)
                 {
                     __ctx1__.UnrefMessage(__ctx1__.__msgPaymentRequest);
@@ -642,11 +647,6 @@ namespace E_commerce
                 {
                     __ctx0__.__subWrapper1.Destroy(__svc__, __ctx0__);
                     __ctx0__.__subWrapper1 = null;
-                }
-                if (__ctx1__ != null && __ctx1__.__msgPaymentConfirmation != null)
-                {
-                    __ctx1__.UnrefMessage(__ctx1__.__msgPaymentConfirmation);
-                    __ctx1__.__msgPaymentConfirmation = null;
                 }
                 base.Finally();
             }
@@ -1136,7 +1136,7 @@ namespace E_commerce
             return Microsoft.XLANGs.Core.StopConditions.Completed;
         }
         private static Microsoft.XLANGs.Core.CachedObject[] _locations = new Microsoft.XLANGs.Core.CachedObject[] {
-            new Microsoft.XLANGs.Core.CachedObject(new System.Guid("{5C65ECF5-0255-4C2A-A45C-84945C2F3A10}"))
+            new Microsoft.XLANGs.Core.CachedObject(new System.Guid("{C21D53B5-BC5C-4430-B560-9648B88F749C}"))
         };
 
     }

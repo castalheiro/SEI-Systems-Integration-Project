@@ -44,7 +44,7 @@ namespace E_commerce {
         <xs:element name=""ComponentsList"">
           <xs:complexType>
             <xs:sequence>
-              <xs:element minOccurs=""1"" maxOccurs=""4"" name=""Component"">
+              <xs:element minOccurs=""4"" maxOccurs=""4"" name=""Component"">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name=""Category"" type=""xs:string"" />
@@ -58,18 +58,6 @@ namespace E_commerce {
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:group name=""ComponentsList"">
-    <xs:sequence>
-      <xs:group ref=""ComponentInfo"" />
-    </xs:sequence>
-  </xs:group>
-  <xs:group name=""ComponentInfo"">
-    <xs:sequence>
-      <xs:element name=""Category"" type=""xs:string"" />
-      <xs:element name=""Option"" type=""xs:string"" />
-    </xs:sequence>
-  </xs:group>
-  <xs:attributeGroup name=""attrGroup0"" />
 </xs:schema>";
         
         public CustomerOrder() {
