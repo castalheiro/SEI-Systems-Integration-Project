@@ -80,20 +80,6 @@
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="PaymentRequest.xsd">
-      <TypeName>PaymentRequest</TypeName>
-      <Namespace>E_commerce</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="PaymentConfirmation.xsd">
-      <TypeName>PaymentConfirmation</TypeName>
-      <Namespace>E_commerce</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
     <Schema Include="OrderConfirmation.xsd">
       <TypeName>OrderConfirmation</TypeName>
       <Namespace>E_commerce</Namespace>

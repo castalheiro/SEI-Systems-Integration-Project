@@ -623,16 +623,6 @@ namespace E_commerce
                 __E_commerceOrchestration_1 __ctx1__ = (__E_commerceOrchestration_1)(__svc__._stateMgrs[1]);
                 __E_commerceOrchestration_root_0 __ctx0__ = (__E_commerceOrchestration_root_0)(__svc__._stateMgrs[0]);
 
-                if (__ctx1__ != null && __ctx1__.__msgPaymentConfirmation != null)
-                {
-                    __ctx1__.UnrefMessage(__ctx1__.__msgPaymentConfirmation);
-                    __ctx1__.__msgPaymentConfirmation = null;
-                }
-                if (__ctx1__ != null && __ctx1__.__msgPaymentRequest != null)
-                {
-                    __ctx1__.UnrefMessage(__ctx1__.__msgPaymentRequest);
-                    __ctx1__.__msgPaymentRequest = null;
-                }
                 if (__ctx1__ != null && __ctx1__.__msgOrderConfirmation != null)
                 {
                     __ctx1__.UnrefMessage(__ctx1__.__msgOrderConfirmation);
@@ -642,6 +632,16 @@ namespace E_commerce
                 {
                     __ctx1__.UnrefMessage(__ctx1__.__msgCustomerOrder);
                     __ctx1__.__msgCustomerOrder = null;
+                }
+                if (__ctx1__ != null && __ctx1__.__msgPaymentConfirmation != null)
+                {
+                    __ctx1__.UnrefMessage(__ctx1__.__msgPaymentConfirmation);
+                    __ctx1__.__msgPaymentConfirmation = null;
+                }
+                if (__ctx1__ != null && __ctx1__.__msgPaymentRequest != null)
+                {
+                    __ctx1__.UnrefMessage(__ctx1__.__msgPaymentRequest);
+                    __ctx1__.__msgPaymentRequest = null;
                 }
                 if (__ctx0__ != null && __ctx0__.__subWrapper1 != null)
                 {
@@ -1136,7 +1136,7 @@ namespace E_commerce
             return Microsoft.XLANGs.Core.StopConditions.Completed;
         }
         private static Microsoft.XLANGs.Core.CachedObject[] _locations = new Microsoft.XLANGs.Core.CachedObject[] {
-            new Microsoft.XLANGs.Core.CachedObject(new System.Guid("{C21D53B5-BC5C-4430-B560-9648B88F749C}"))
+            new Microsoft.XLANGs.Core.CachedObject(new System.Guid("{F432118D-F715-4201-A8B6-3AC5AEE8141C}"))
         };
 
     }
