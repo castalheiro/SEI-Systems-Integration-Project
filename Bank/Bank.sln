@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bank", "http://localhost/Bank", "{1889D3D8-6FEF-41AC-9DCE-4D736AD645E5}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bank", "http://localhost/Bank", "{A1DEA2A0-6508-41AE-9308-79B65A64AA77}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
@@ -28,8 +28,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1889D3D8-6FEF-41AC-9DCE-4D736AD645E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1889D3D8-6FEF-41AC-9DCE-4D736AD645E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DEA2A0-6508-41AE-9308-79B65A64AA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DEA2A0-6508-41AE-9308-79B65A64AA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

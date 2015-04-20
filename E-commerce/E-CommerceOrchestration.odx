@@ -1,0 +1,281 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="53430c25-bc3c-454e-9994-e542b0588776" LowerBound="1.1" HigherBound="58.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="E_Commerce" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="2db7aef4-3254-4455-b009-09c5badc4d51" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortCustomerOrder" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c60ce1c1-aa70-4e45-98f8-2ff3f7420728" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="be306f68-c168-413f-9798-ff3b9e85aa05" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.26">
+                    <om:Property Name="Ref" Value="E_Commerce.CustomerOrder" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="ff7ce5de-b12f-4df5-8090-d8b1b9f6017f" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortOrderConfirmation" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="64e56b9b-8b15-4295-aac4-9c215d108a31" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="05ff078b-5c26-4213-8610-e5a98a714789" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.30">
+                    <om:Property Name="Ref" Value="E_Commerce.OrderConfirmation" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1f010454-1c17-444c-b8f7-3b360097056d" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="57.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="E_CommerceOrchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="b1bec4f3-608a-419f-b320-8920516cba58" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="E_Commerce.CustomerOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgCustomerOrder" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="aac0597b-7c41-4b78-aa30-8fa2e69438af" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="Type" Value="E_Commerce.OrderConfirmation" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOrderConfirmation" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="620656db-4cfe-43fb-8a06-4947de9de849" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="Type" Value="E_Commerce.localhost.Service_.ExecutePayment_request" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgPaymentRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="cc19ca10-374a-471a-9d63-830196942452" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="Type" Value="E_Commerce.localhost.Service_.ExecutePayment_response" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgPaymentConfirmation" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="483c752e-b826-4169-afb3-3c3188e49f94" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="b92bac81-8e6f-492d-afd3-93341ec3eecf" ParentLink="ServiceBody_Statement" LowerBound="33.1" HigherBound="35.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_1" />
+                    <om:Property Name="MessageName" Value="msgCustomerOrder" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="3132aac2-1cf0-4005-8498-9dc17d3ec283" ParentLink="ServiceBody_Statement" LowerBound="35.1" HigherBound="43.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="c88933c7-70ab-4285-b16e-5f2303ab5d28" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="42.1">
+                        <om:Property Name="Expression" Value="msgPaymentRequest.amount = msgCustomerOrder.Price;&#xD;&#xA;msgPaymentRequest.customerName = msgCustomerOrder.CustomerName;&#xD;&#xA;msgPaymentRequest.customerCard = msgCustomerOrder.CreditCard;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="c8f24251-c17f-4def-b6b3-405e27382efd" ParentLink="Construct_MessageRef" LowerBound="36.23" HigherBound="36.40">
+                        <om:Property Name="Ref" Value="msgPaymentRequest" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="ab9075fc-d054-4b3b-8560-9b2507d93893" ParentLink="ServiceBody_Statement" LowerBound="43.1" HigherBound="45.1">
+                    <om:Property Name="PortName" Value="Port_3" />
+                    <om:Property Name="MessageName" Value="msgPaymentRequest" />
+                    <om:Property Name="OperationName" Value="ExecutePayment" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="75c892b2-2197-48c1-9ab8-707ec0e2fab7" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="47.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="Port_3" />
+                    <om:Property Name="MessageName" Value="msgPaymentConfirmation" />
+                    <om:Property Name="OperationName" Value="ExecutePayment" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_2" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="d16b1a71-b9d4-4771-be17-40f3c294004c" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="53.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_2" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="570d074b-0d89-44e6-b84a-0406393bc015" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="52.1">
+                        <om:Property Name="ClassName" Value="E_Commerce.Transform_2" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_2" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="9a28be88-e817-4d75-8ad6-3b4f808cef50" ParentLink="Transform_InputMessagePartRef" LowerBound="51.76" HigherBound="51.92">
+                            <om:Property Name="MessageRef" Value="msgCustomerOrder" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="20edc02d-f69d-47c7-8a02-6f023adab00f" ParentLink="Transform_OutputMessagePartRef" LowerBound="51.28" HigherBound="51.48">
+                            <om:Property Name="MessageRef" Value="msgOrderConfirmation" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="b0bdc2a4-7466-45ca-a66d-af289d888be4" ParentLink="Construct_MessageRef" LowerBound="48.23" HigherBound="48.43">
+                        <om:Property Name="Ref" Value="msgOrderConfirmation" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="4c424e7e-12d8-43a6-85bf-bbec17ece3f9" ParentLink="ServiceBody_Statement" LowerBound="53.1" HigherBound="55.1">
+                    <om:Property Name="PortName" Value="Port_2" />
+                    <om:Property Name="MessageName" Value="msgOrderConfirmation" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_2" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="9cdc644f-70c6-4d27-9d9c-544a701aae88" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="E_Commerce.PortCustomerOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="150c870a-1714-4d16-8abd-2f1524d9e44e" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3bd96900-1e40-4270-b87a-db6e0b8257f8" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="17" />
+                <om:Property Name="IsWebPort" Value="True" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="E_Commerce.localhost.Service_.Service" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_3" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="ec5920e2-71dd-4ea1-ac82-c2fae03c6514" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.PassThruReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" />
+                    <om:Property Name="TransportType" Value="SOAP" />
+                    <om:Property Name="URI" Value="http://localhost/Bank/Service.asmx" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3933151f-5b1d-4ab9-9d4e-9f58356c72bd" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="25.1" HigherBound="27.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="32" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="E_Commerce.PortOrderConfirmation" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_2" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="66e372f0-6a09-4725-a130-58d976a1cf93" ParentLink="PortDeclaration_CLRAttribute" LowerBound="25.1" HigherBound="26.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module E_Commerce
+{
+    internal porttype PortCustomerOrder
+    {
+        oneway Operation_1
+        {
+            CustomerOrder
+        };
+    };
+    internal porttype PortOrderConfirmation
+    {
+        oneway Operation_1
+        {
+            OrderConfirmation
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service E_CommerceOrchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortCustomerOrder Port_1;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("SOAP", "http://localhost/Bank/Service.asmx", typeof(Microsoft.BizTalk.DefaultPipelines.PassThruReceive), typeof(Microsoft.BizTalk.DefaultPipelines.PassThruTransmit), Proxy=typeof(E_Commerce.localhost.Service_.Service))]
+        port uses localhost.Service_.Service Port_3;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortOrderConfirmation Port_2;
+        message CustomerOrder msgCustomerOrder;
+        message OrderConfirmation msgOrderConfirmation;
+        message localhost.Service_.ExecutePayment_request msgPaymentRequest;
+        message localhost.Service_.ExecutePayment_response msgPaymentConfirmation;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b92bac81-8e6f-492d-afd3-93341ec3eecf")]
+            activate receive (Port_1.Operation_1, msgCustomerOrder);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3132aac2-1cf0-4005-8498-9dc17d3ec283")]
+            construct msgPaymentRequest
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c88933c7-70ab-4285-b16e-5f2303ab5d28")]
+                msgPaymentRequest.amount = msgCustomerOrder.Price;
+                msgPaymentRequest.customerName = msgCustomerOrder.CustomerName;
+                msgPaymentRequest.customerCard = msgCustomerOrder.CreditCard;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ab9075fc-d054-4b3b-8560-9b2507d93893")]
+            send (Port_3.ExecutePayment, msgPaymentRequest);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("75c892b2-2197-48c1-9ab8-707ec0e2fab7")]
+            receive (Port_3.ExecutePayment, msgPaymentConfirmation);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d16b1a71-b9d4-4771-be17-40f3c294004c")]
+            construct msgOrderConfirmation
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("570d074b-0d89-44e6-b84a-0406393bc015")]
+                transform (msgOrderConfirmation) = E_Commerce.Transform_2 (msgCustomerOrder);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4c424e7e-12d8-43a6-85bf-bbec17ece3f9")]
+            send (Port_2.Operation_1, msgOrderConfirmation);
+        }
+    }
+}
+
