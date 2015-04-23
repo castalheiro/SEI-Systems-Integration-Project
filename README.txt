@@ -1,0 +1,3 @@
+A orquestração E-commerce encontra-se na pasta E-commerce\E-commerce. No interior da pasta E-commerce existem outras duas pastas, nomeadamente PortOrchInput e PortOrchOutput. Dentro da primeira pasta (PortOrchInput) devem ser colocados os ficheiros correspondentes às CustomerOrder. As OrderConfirmation serão colocadas automáticamente na pasta PortOrchOutput.
+
+O web service (Bank) encontra-se na pasta Bank, sendo que dentro desta pasta existe outra pasta Bank que contém os ficheiros gerados durante o deploy, nomeadamente o Service.cs.
