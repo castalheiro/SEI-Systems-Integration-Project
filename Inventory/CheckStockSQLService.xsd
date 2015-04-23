@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://InventorySQL" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <msbtssql:sqlScript value="exec [CheckStock] @category=&quot;Hard Disk&quot;, @option=&quot;128 GB&quot;" xmlns:msbtssql="http://schemas.microsoft.com/BizTalk/2003" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InComponent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CheckStock">
+          <xs:complexType>
+            <xs:attribute name="category" type="xs:string" />
+            <xs:attribute name="option" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="inventory" xmlns:q1="http://InventorySQL" type="q1:inventoryType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="inventoryType">
+    <xs:attribute name="stock_quantity" type="xs:int" />
+  </xs:complexType>
+</xs:schema>
