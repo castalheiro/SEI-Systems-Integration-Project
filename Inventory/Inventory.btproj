@@ -38,6 +38,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>InventoryKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <Name>System</Name>
@@ -65,10 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="CheckStockSQLService.xsd">
+    <Schema Include="schema\CheckStockSQLService.xsd">
       <TypeName>CheckStockSQLService</TypeName>
       <Namespace>Inventory</Namespace>
       <SubType>Task</SubType>
@@ -82,29 +82,78 @@
     </XLang>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="IncreaseStockSQLService.xsd">
+    <Schema Include="schema\IncreaseStockSQLService.xsd">
       <TypeName>IncreaseStockSQLService</TypeName>
       <Namespace>Inventory</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="CheckComponent.xsd">
+    <Schema Include="schema\CheckComponent.xsd">
       <TypeName>CheckComponent</TypeName>
       <Namespace>Inventory</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Map Include="Transform_1.btm">
-      <TypeName>Transform_1</TypeName>
+    <Map Include="transform\CheckStockTransform.btm">
+      <TypeName>CheckStockTransform</TypeName>
       <Namespace>Inventory</Namespace>
       <SubType>Task</SubType>
     </Map>
   </ItemGroup>
   <ItemGroup>
+    <Schema Include="schema\Properties.xsd">
+      <TypeName>Properties</TypeName>
+      <Namespace>Inventory.schema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="schema\ComponentAvailable.xsd">
+      <TypeName>ComponentAvailable</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="schema\ComponentProperties.xsd">
+      <TypeName>ComponentProperties</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <None Include="InventoryKey.snk" />
-    <None Include="Tutorial.snk" />
+    <Schema Include="schema\OrderComponent.xsd">
+      <TypeName>OrderComponent</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="schema\ShippingNotice.xsd">
+      <TypeName>ShippingNotice</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="transform\CheckComponentTransform.btm">
+      <TypeName>CheckComponentTransform</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="transform\ComponentAvailableTransform.btm">
+      <TypeName>ComponentAvailableTransform</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="transform\OrderComponentTransform.btm">
+      <TypeName>OrderComponentTransform</TypeName>
+      <Namespace>Inventory</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

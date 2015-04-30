@@ -12,7 +12,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}">
         <Files>
-		<File Path="CheckComponent.xsd">
+		<File Path="Schema\CustomerOrder.xsd">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
 			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
@@ -26,21 +26,7 @@
 			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
 			<AutoRefreshSchema>0</AutoRefreshSchema>
 		</File>
-		<File Path="CustomerOrder.xsd">
-			<ValidateTestMapInput>True</ValidateTestMapInput>
-			<ValidateTestMapOutput>True</ValidateTestMapOutput>
-			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
-			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
-			<TestMapSourceType>0</TestMapSourceType>
-			<TestMapTargetType>0</TestMapTargetType>
-			<EditorOutputInstanceFilename>C:\Tutorial\Lessons\E-Commerce\MessageCustomerOrder.xml</EditorOutputInstanceFilename>
-			<EditorInputInstanceFilename></EditorInputInstanceFilename>
-			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
-			<ValidateInstanceInputType>0</ValidateInstanceInputType>
-			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
-			<AutoRefreshSchema>0</AutoRefreshSchema>
-		</File>
-		<File Path="OrderConfirmation.xsd">
+		<File Path="Schema\OrderConfirmation.xsd">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
 			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
@@ -54,7 +40,7 @@
 			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
 			<AutoRefreshSchema>0</AutoRefreshSchema>
 		</File>
-		<File Path="Transform_2.btm">
+		<File Path="Transform\OrderConfirmationTransform.btm">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
 			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>

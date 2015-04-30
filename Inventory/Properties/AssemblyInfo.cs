@@ -15,7 +15,8 @@ using Microsoft.BizTalk.XLANGs.BTXEngine;
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: Microsoft.XLANGs.BaseTypes.BizTalkAssemblyAttribute(typeof(BTXService))]
+[assembly: Microsoft.XLANGs.BaseTypes.BizTalkAssembly(typeof(Microsoft.BizTalk.XLANGs.BTXEngine.BTXService))]
+//[assembly: Microsoft.XLANGs.BaseTypes.BizTalkAssemblyAttribute(typeof(BTXService))]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -37,3 +38,6 @@ using Microsoft.BizTalk.XLANGs.BTXEngine;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.0.0")]
+
+//[assembly: Microsoft.XLANGs.BaseTypes.BizTalkAssembly(typeof(Microsoft.BizTalk.XLANGs.BTXEngine.BTXService))]

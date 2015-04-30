@@ -1,0 +1,4 @@
+C:\Tutorial\Lessons\Inventory\bin\Debug\Inventory.dll
+C:\Tutorial\Lessons\Inventory\bin\Debug\Inventory.pdb
+C:\Tutorial\Lessons\Inventory\obj\Debug\Inventory.dll
+C:\Tutorial\Lessons\Inventory\obj\Debug\Inventory.pdb

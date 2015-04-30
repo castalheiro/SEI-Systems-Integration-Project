@@ -36,9 +36,13 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Tutorial.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>ECommerceKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Inventory, Version=2.0.0.0, Culture=neutral, PublicKeyToken=95c55f74acb21b38, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventory\bin\Debug\Inventory.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -75,7 +79,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="CustomerOrder.xsd">
+    <Schema Include="Schema\CustomerOrder.xsd">
       <TypeName>CustomerOrder</TypeName>
       <Namespace>E_Commerce</Namespace>
       <SubType>Task</SubType>
@@ -86,17 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <Schema Include="OrderConfirmation.xsd">
+    <Schema Include="Schema\OrderConfirmation.xsd">
       <SubType>Task</SubType>
       <TypeName>OrderConfirmation</TypeName>
       <Namespace>E_Commerce</Namespace>
     </Schema>
-    <Schema Include="CheckComponent.xsd">
-      <TypeName>CheckComponent</TypeName>
-      <Namespace>E_Commerce</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <None Include="Tutorial.snk" />
+    <None Include="ECommerceKey.snk" />
     <None Include="Web References\localhost\Reference.map">
       <Generator>BtsDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.odx</LastGenOutput>
@@ -140,8 +139,8 @@
     </XLang>
   </ItemGroup>
   <ItemGroup>
-    <Map Include="Transform_2.btm">
-      <TypeName>Transform_2</TypeName>
+    <Map Include="Transform\OrderConfirmationTransform.btm">
+      <TypeName>OrderConfirmationTransform</TypeName>
       <Namespace>E_Commerce</Namespace>
       <SubType>Task</SubType>
     </Map>
