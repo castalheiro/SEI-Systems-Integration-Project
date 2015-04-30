@@ -68,7 +68,7 @@
 			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
 			<AutoRefreshSchema>0</AutoRefreshSchema>
 		</File>
-		<File Path="Transform_1.btm">
+		<File Path="ShippingOrderTransform.btm">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
 			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>

@@ -104,8 +104,8 @@
     <None Include="Tutorial.snk" />
   </ItemGroup>
   <ItemGroup>
-    <Map Include="Transform_1.btm">
-      <TypeName>Transform_1</TypeName>
+    <Map Include="ShippingOrderTransform.btm">
+      <TypeName>ShippingOrderTransform</TypeName>
       <Namespace>Supplier</Namespace>
       <SubType>Task</SubType>
     </Map>
