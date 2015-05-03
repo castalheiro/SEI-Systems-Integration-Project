@@ -1,0 +1,749 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="34c9b8ec-fed2-4021-b668-91b833a24450" LowerBound="1.1" HigherBound="139.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Inventory" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="ea9c4e73-4f1b-464c-a0fa-411159f2d540" ParentLink="Module_PortType" LowerBound="20.1" HigherBound="27.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata port type: " />
+            <om:Property Name="Name" Value="CheckStock_PortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="8b9ce999-467f-48e0-8645-0ba2648199aa" ParentLink="PortType_OperationDeclaration" LowerBound="22.1" HigherBound="26.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata operation: " />
+                <om:Property Name="Name" Value="CheckStock" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="fb20e0de-0c33-4687-bd48-5090b4b84143" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="24.13" HigherBound="24.39">
+                    <om:Property Name="Ref" Value="Inventory.CheckStockProcedureRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="b4db92a8-006a-4207-9075-fd28d466e422" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="24.41" HigherBound="24.68">
+                    <om:Property Name="Ref" Value="Inventory.CheckStockProcedureResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="30e5050a-9171-4d2e-8422-5f7dce9d6a79" ParentLink="Module_PortType" LowerBound="27.1" HigherBound="34.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="IncreaseStock_PortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="7bbff033-f9bc-4953-a279-68d76719d216" ParentLink="PortType_OperationDeclaration" LowerBound="29.1" HigherBound="33.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="IncreaseStock" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="21317815-a933-4195-bcc7-f0c3179d8c99" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="31.44" HigherBound="31.74">
+                    <om:Property Name="Ref" Value="Inventory.IncreaseStockProcedureResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="41e1fc51-704f-4121-aa61-7241a28fa094" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="31.13" HigherBound="31.42">
+                    <om:Property Name="Ref" Value="Inventory.IncreaseStockProcedureRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="74d28a71-c036-4a62-94dc-f8f6cb2d7b71" ParentLink="Module_PortType" LowerBound="34.1" HigherBound="41.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CheckComponent_PortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="86b72b83-44f7-479d-b2c3-5e97818b2710" ParentLink="PortType_OperationDeclaration" LowerBound="36.1" HigherBound="40.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CheckComponent" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="9325241f-f060-4082-9061-9a8545d6e7c6" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="38.13" HigherBound="38.27">
+                    <om:Property Name="Ref" Value="Inventory.CheckComponent" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9a7c404b-d1e1-479a-9f87-78104d8357f8" ParentLink="Module_PortType" LowerBound="41.1" HigherBound="48.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OrderComponent_PortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="d37e27eb-873a-4f1a-9503-49566bfc6393" ParentLink="PortType_OperationDeclaration" LowerBound="43.1" HigherBound="47.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrderComponent" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="d9affda3-8117-4adf-bdaf-12aaf40f3cf8" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="45.13" HigherBound="45.36">
+                    <om:Property Name="Ref" Value="Supplier.OrderComponent" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c9546fd0-dfc3-4abc-835b-b01c0a34d919" ParentLink="Module_PortType" LowerBound="48.1" HigherBound="55.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ShippingNotice_PortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="8aabdff8-e82a-4929-b38b-0a7288fde9e9" ParentLink="PortType_OperationDeclaration" LowerBound="50.1" HigherBound="54.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ShippingNotice" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="72d75d5a-be13-4408-ad24-d3a44667e39e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="52.13" HigherBound="52.36">
+                    <om:Property Name="Ref" Value="Supplier.ShippingNotice" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="69f52fb3-4b25-4d00-8734-82fa35bbedf0" ParentLink="Module_PortType" LowerBound="55.1" HigherBound="62.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ComponentAvailable_PortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="c0bc40b0-3b1f-4510-bff9-91c858801358" ParentLink="PortType_OperationDeclaration" LowerBound="57.1" HigherBound="61.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ComponentAvailable" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="3d8250f6-58a1-4a73-ad7b-10ae9ef77ea5" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="59.13" HigherBound="59.31">
+                    <om:Property Name="Ref" Value="Inventory.ComponentAvailable" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="79f5c064-f9dc-4a1c-ae8a-3377eb9dbeaa" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="CheckStockProcedureRequest" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="491def9b-088e-4cf4-b0f8-cbc9152fdd09" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="Inventory.CheckStockSQLService.InComponent" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="ee011d7b-4c4e-4409-9ab6-70112e8e8520" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="CheckStockProcedureResponse" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="76ad87b7-6a12-4f84-b346-f43e0b813feb" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="Inventory.CheckStockSQLService.OutStock" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="ceb8a4ba-2977-46ff-8237-0a720582f22d" ParentLink="Module_MessageType" LowerBound="12.1" HigherBound="16.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="IncreaseStockProcedureRequest" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="ca4a0613-cfed-4558-be99-943dc7710d22" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="ClassName" Value="Inventory.IncreaseStockSQLService.InComponent" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="f22e18b5-f080-409f-bf87-2516ad742ae1" ParentLink="Module_MessageType" LowerBound="16.1" HigherBound="20.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="IncreaseStockProcedureResponse" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="2decdf8a-774b-47c8-9515-783cf260802b" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="ClassName" Value="Inventory.IncreaseStockSQLService.OutOperationResult" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="81e6960e-d412-4381-8461-3655f9b279f2" ParentLink="Module_ServiceDeclaration" LowerBound="66.1" HigherBound="138.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Orchestration_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="CorrelationDeclaration" OID="3ee5998d-45bc-450c-9788-aacff49813ce" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="81.1" HigherBound="82.1">
+                <om:Property Name="Type" Value="Inventory.CorrelationType_2" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Correlation_2" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="0b40e6e1-d804-46eb-bb67-6bad39adf99c" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="115.85" HigherBound="115.109">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="de404dd8-7d6c-4cba-b308-fcff3a21256c" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_3" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="StatementRef" OID="d2476218-3b3a-4055-9218-068c7dd76dfd" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="117.84" HigherBound="117.97">
+                    <om:Property Name="Initializes" Value="False" />
+                    <om:Property Name="Ref" Value="5e26f34a-6d4d-4b06-b183-29878fc031fb" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_4" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="507be2f2-4371-4433-8a14-f8a324c92fdb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="82.1" HigherBound="83.1">
+                <om:Property Name="Type" Value="Inventory.CheckComponent" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgCheckComponent" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0295213b-0ab5-4ba3-ae0d-f34b20ac68dd" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="83.1" HigherBound="84.1">
+                <om:Property Name="Type" Value="Inventory.CheckStockProcedureRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgCheckStockRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b8479abc-4806-45bf-9197-4bea659846fa" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="84.1" HigherBound="85.1">
+                <om:Property Name="Type" Value="Inventory.CheckStockProcedureResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgCheckStockResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d88b1355-9815-4d3c-b822-1d519979ecd8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="85.1" HigherBound="86.1">
+                <om:Property Name="Type" Value="Supplier.OrderComponent" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOrderComponentRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e4562449-b05f-4cdb-ac4f-d526ed0fe5eb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="86.1" HigherBound="87.1">
+                <om:Property Name="Type" Value="Supplier.ShippingNotice" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgShippingNotice" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2ea40fc7-09a7-40d7-b275-610a9e4306d3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="87.1" HigherBound="88.1">
+                <om:Property Name="Type" Value="Inventory.IncreaseStockProcedureRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgIncreseStockRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="95b45e99-0503-40e3-b922-ca9eaa37549e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="88.1" HigherBound="89.1">
+                <om:Property Name="Type" Value="Inventory.IncreaseStockProcedureResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgIncreaseStockResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fc9ccd18-8a69-475a-b368-86db480ff4fc" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="89.1" HigherBound="90.1">
+                <om:Property Name="Type" Value="Inventory.ComponentAvailable" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgComponentAvailable" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="c2e5e9fc-aa61-4be5-9a31-aaff72fa4ebb" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="51607020-740f-4b8e-8763-e7068f6a62cf" ParentLink="ServiceBody_Statement" LowerBound="92.1" HigherBound="94.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="CheckComponent_ReceivePort" />
+                    <om:Property Name="MessageName" Value="msgCheckComponent" />
+                    <om:Property Name="OperationName" Value="CheckComponent" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveCheckComponentMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="3b32bcb1-013a-493d-a946-9ae96aadc71f" ParentLink="ServiceBody_Statement" LowerBound="94.1" HigherBound="96.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;Inventory Debug&quot;,&quot;ReceivedMessage = &quot; + msgCheckComponent.Category + &quot; &quot; + msgCheckComponent.Option); " />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="CheckComponentMessageDebug" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="c28b120e-3038-400c-921e-667fa0f46e68" ParentLink="ServiceBody_Statement" LowerBound="96.1" HigherBound="102.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructCheckStockMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="290b25e6-04e0-4729-a300-4fbc65ca2d94" ParentLink="ComplexStatement_Statement" LowerBound="99.1" HigherBound="101.1">
+                        <om:Property Name="ClassName" Value="Inventory.CheckStockTransform" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CheckStockTransform" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="0e15675d-1876-4993-aeb2-d5935b31e887" ParentLink="Transform_InputMessagePartRef" LowerBound="100.94" HigherBound="100.111">
+                            <om:Property Name="MessageRef" Value="msgCheckComponent" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="f60872bc-84da-47b3-9433-58e8de97a4a5" ParentLink="Transform_OutputMessagePartRef" LowerBound="100.28" HigherBound="100.59">
+                            <om:Property Name="MessageRef" Value="MsgCheckStockRequest" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="c53f3124-fd7c-4a1c-88c7-0fce477e2263" ParentLink="Construct_MessageRef" LowerBound="97.23" HigherBound="97.43">
+                        <om:Property Name="Ref" Value="MsgCheckStockRequest" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="bf08f5c0-a4c3-4793-9714-def29b748665" ParentLink="ServiceBody_Statement" LowerBound="102.1" HigherBound="104.1">
+                    <om:Property Name="PortName" Value="CheckStock_SQLPort" />
+                    <om:Property Name="MessageName" Value="MsgCheckStockRequest" />
+                    <om:Property Name="OperationName" Value="CheckStock" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendCheckStockMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="3c3389bf-fbeb-4aed-89e7-2ed6b6d6e9d8" ParentLink="ServiceBody_Statement" LowerBound="104.1" HigherBound="106.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="CheckStock_SQLPort" />
+                    <om:Property Name="MessageName" Value="msgCheckStockResponse" />
+                    <om:Property Name="OperationName" Value="CheckStock" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveCheckStockMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="81d179ce-6a6f-4fab-81a6-010522867460" ParentLink="ServiceBody_Statement" LowerBound="106.1" HigherBound="112.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructOrderComponentMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="dd12c158-34d4-41cf-8ca4-e9f12fb11bed" ParentLink="ComplexStatement_Statement" LowerBound="109.1" HigherBound="111.1">
+                        <om:Property Name="ClassName" Value="Inventory.OrderComponentTransform" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="OrderComponentTransform" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="58deb851-f633-4311-b388-c4376fbb1425" ParentLink="Transform_InputMessagePartRef" LowerBound="110.91" HigherBound="110.108">
+                            <om:Property Name="MessageRef" Value="msgCheckComponent" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="9e23dfb6-d112-4742-82f4-4dd90bf6453a" ParentLink="Transform_InputMessagePartRef" LowerBound="110.110" HigherBound="110.142">
+                            <om:Property Name="MessageRef" Value="msgCheckStockResponse" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_5" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="ff6d2856-8b5a-4476-81a1-341eab680b30" ParentLink="Transform_OutputMessagePartRef" LowerBound="110.28" HigherBound="110.52">
+                            <om:Property Name="MessageRef" Value="msgOrderComponentRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="f19c7d10-cdda-4a4e-b3d2-1e7304ce7a07" ParentLink="Construct_MessageRef" LowerBound="107.23" HigherBound="107.47">
+                        <om:Property Name="Ref" Value="msgOrderComponentRequest" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="868b69ab-0857-40d4-87fb-e6355b656980" ParentLink="ServiceBody_Statement" LowerBound="112.1" HigherBound="114.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;Inventory Debug&quot;,&quot;Component = &quot; + msgOrderComponentRequest.PurchaseNumber + &quot; &quot; + msgOrderComponentRequest.ComponentInfo.Category + &quot; &quot; + msgOrderComponentRequest.ComponentInfo.Option + &quot; &quot; + msgOrderComponentRequest.Quantity);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="OrderComponentMessageDebug" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="de404dd8-7d6c-4cba-b308-fcff3a21256c" ParentLink="ServiceBody_Statement" LowerBound="114.1" HigherBound="116.1">
+                    <om:Property Name="PortName" Value="OrderComponent_SendPort" />
+                    <om:Property Name="MessageName" Value="msgOrderComponentRequest" />
+                    <om:Property Name="OperationName" Value="OrderComponent" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendOrderComponentMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="5e26f34a-6d4d-4b06-b183-29878fc031fb" ParentLink="ServiceBody_Statement" LowerBound="116.1" HigherBound="118.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="ShippingNotice_ReceivePort" />
+                    <om:Property Name="MessageName" Value="msgShippingNotice" />
+                    <om:Property Name="OperationName" Value="ShippingNotice" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveShippingNoticeMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="adb7e685-0bd8-4d37-9043-2089845685fe" ParentLink="ServiceBody_Statement" LowerBound="118.1" HigherBound="124.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="75e4d5e0-b855-45e1-975f-cc343be6ef30" ParentLink="ComplexStatement_Statement" LowerBound="121.1" HigherBound="123.1">
+                        <om:Property Name="ClassName" Value="Inventory.CheckComponentTransform" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CheckComponentTransform" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="73d98aa9-9e14-4f1e-b74d-3694d901a5d7" ParentLink="Transform_InputMessagePartRef" LowerBound="122.100" HigherBound="122.117">
+                            <om:Property Name="MessageRef" Value="msgCheckComponent" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_6" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="d1899411-ee7f-4722-a99b-d5f48233b4fa" ParentLink="Transform_OutputMessagePartRef" LowerBound="122.28" HigherBound="122.61">
+                            <om:Property Name="MessageRef" Value="msgIncreseStockRequest" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_7" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="602ba315-6d77-47bd-a0ca-e3853b6785b2" ParentLink="Construct_MessageRef" LowerBound="119.23" HigherBound="119.45">
+                        <om:Property Name="Ref" Value="msgIncreseStockRequest" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="4a4b7623-3c08-48b7-91cf-e9c6137bc970" ParentLink="ServiceBody_Statement" LowerBound="124.1" HigherBound="126.1">
+                    <om:Property Name="PortName" Value="IncreaseStock_SQLPort" />
+                    <om:Property Name="MessageName" Value="msgIncreseStockRequest" />
+                    <om:Property Name="OperationName" Value="IncreaseStock" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendIncreaseStockMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="6d48dbb7-3009-4785-a5a6-5bdb06e43d12" ParentLink="ServiceBody_Statement" LowerBound="126.1" HigherBound="128.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="IncreaseStock_SQLPort" />
+                    <om:Property Name="MessageName" Value="msgIncreaseStockResponse" />
+                    <om:Property Name="OperationName" Value="IncreaseStock" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveIncreaseStockResponseMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="18367104-3263-4450-8f84-5df1694043c8" ParentLink="ServiceBody_Statement" LowerBound="128.1" HigherBound="134.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructComponentAvailableMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="91b11d87-1f43-4235-8fc0-d2445812cd2c" ParentLink="ComplexStatement_Statement" LowerBound="131.1" HigherBound="133.1">
+                        <om:Property Name="ClassName" Value="Inventory.ComponentAvailableTransform" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ComponentAvailableTransform" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="4fc49b44-4b0a-44e4-9f02-38847fc01b53" ParentLink="Transform_InputMessagePartRef" LowerBound="132.92" HigherBound="132.109">
+                            <om:Property Name="MessageRef" Value="msgCheckComponent" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_8" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="a0bfca23-dc61-4598-a79e-91b1bc43e3e6" ParentLink="Transform_InputMessagePartRef" LowerBound="132.111" HigherBound="132.143">
+                            <om:Property Name="MessageRef" Value="msgCheckStockResponse" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_10" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="e0525c29-46f5-4cc1-b0e9-e50e1226f19b" ParentLink="Transform_OutputMessagePartRef" LowerBound="132.28" HigherBound="132.49">
+                            <om:Property Name="MessageRef" Value="msgComponentAvailable" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_9" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="daf15563-0555-47d6-b565-e8e77950f416" ParentLink="Construct_MessageRef" LowerBound="129.23" HigherBound="129.44">
+                        <om:Property Name="Ref" Value="msgComponentAvailable" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="b4aa09ba-e22b-4098-981b-5082cb8e2514" ParentLink="ServiceBody_Statement" LowerBound="134.1" HigherBound="136.1">
+                    <om:Property Name="PortName" Value="ComponentAvailable_SendPort" />
+                    <om:Property Name="MessageName" Value="msgComponentAvailable" />
+                    <om:Property Name="OperationName" Value="ComponentAvailable" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendComponentAvailableMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="5ec7b7ab-411f-4022-ad06-9ce750a312ea" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="69.1" HigherBound="71.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="12" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Inventory.CheckStock_PortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CheckStock_SQLPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="c375057e-13c0-4633-9378-d1e992a6047f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="69.1" HigherBound="70.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1dfab5c7-c65c-4f45-ba16-d934b369159f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="71.1" HigherBound="73.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="2" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Inventory.CheckComponent_PortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CheckComponent_ReceivePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="8f8fa2b3-980d-47ae-ba72-f8cab2eb14fd" ParentLink="PortDeclaration_CLRAttribute" LowerBound="71.1" HigherBound="72.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="65f37eca-4628-4c66-9d81-35672c3f77e7" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="73.1" HigherBound="75.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="33" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Inventory.OrderComponent_PortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrderComponent_SendPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="5f94154e-63e3-4bb3-bd3f-bd1037abad43" ParentLink="PortDeclaration_CLRAttribute" LowerBound="73.1" HigherBound="74.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="046d0240-bee7-4ab3-bd23-c3da587929ea" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="75.1" HigherBound="77.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="36" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Inventory.ShippingNotice_PortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ShippingNotice_ReceivePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="506ff2ba-a4c9-43ed-90c0-4ee63f45b38f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="75.1" HigherBound="76.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="af942fc4-2977-4e8b-8d6b-a7734e8e2040" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="77.1" HigherBound="79.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="50" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Inventory.IncreaseStock_PortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="IncreaseStock_SQLPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="902b3a7a-3f9c-4f8a-a9e8-90f716c089d0" ParentLink="PortDeclaration_CLRAttribute" LowerBound="77.1" HigherBound="78.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="4fd874ff-8716-4b3e-9efa-b51f68ad7c74" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="79.1" HigherBound="81.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="64" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Inventory.ComponentAvailable_PortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ComponentAvailable_SendPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="bf09d205-7265-4b4a-9749-4b2d5644fe77" ParentLink="PortDeclaration_CLRAttribute" LowerBound="79.1" HigherBound="80.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="de3e32f0-1912-44da-96d3-d973bdbad162" ParentLink="Module_CorrelationType" LowerBound="62.1" HigherBound="66.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CorrelationType_2" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PropertyRef" OID="68ad0c94-66b2-4386-be05-6d3a0cee2c92" ParentLink="CorrelationType_PropertyRef" LowerBound="64.9" HigherBound="64.32">
+                <om:Property Name="Ref" Value="Supplier.PurchaseNumber" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Inventory
+{
+    internal messagetype CheckStockProcedureRequest
+    {
+        body CheckStockSQLService.InComponent parameters;
+    };
+    internal messagetype CheckStockProcedureResponse
+    {
+        body CheckStockSQLService.OutStock parameters;
+    };
+    internal messagetype IncreaseStockProcedureRequest
+    {
+        body IncreaseStockSQLService.InComponent parameters;
+    };
+    internal messagetype IncreaseStockProcedureResponse
+    {
+        body IncreaseStockSQLService.OutOperationResult parameters;
+    };
+    internal porttype CheckStock_PortType
+    {
+        requestresponse CheckStock
+        {
+            CheckStockProcedureRequest, CheckStockProcedureResponse
+        };
+    };
+    internal porttype IncreaseStock_PortType
+    {
+        requestresponse IncreaseStock
+        {
+            IncreaseStockProcedureRequest, IncreaseStockProcedureResponse
+        };
+    };
+    internal porttype CheckComponent_PortType
+    {
+        oneway CheckComponent
+        {
+            CheckComponent
+        };
+    };
+    internal porttype OrderComponent_PortType
+    {
+        oneway OrderComponent
+        {
+            Supplier.OrderComponent
+        };
+    };
+    internal porttype ShippingNotice_PortType
+    {
+        oneway ShippingNotice
+        {
+            Supplier.ShippingNotice
+        };
+    };
+    internal porttype ComponentAvailable_PortType
+    {
+        oneway ComponentAvailable
+        {
+            ComponentAvailable
+        };
+    };
+    internal correlationtype CorrelationType_2
+    {
+        Supplier.PurchaseNumber
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    public service Orchestration_1
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses CheckStock_PortType CheckStock_SQLPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements CheckComponent_PortType CheckComponent_ReceivePort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses OrderComponent_PortType OrderComponent_SendPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ShippingNotice_PortType ShippingNotice_ReceivePort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses IncreaseStock_PortType IncreaseStock_SQLPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ComponentAvailable_PortType ComponentAvailable_SendPort;
+        correlation CorrelationType_2 Correlation_2;
+        message CheckComponent msgCheckComponent;
+        message CheckStockProcedureRequest MsgCheckStockRequest;
+        message CheckStockProcedureResponse msgCheckStockResponse;
+        message Supplier.OrderComponent msgOrderComponentRequest;
+        message Supplier.ShippingNotice msgShippingNotice;
+        message IncreaseStockProcedureRequest msgIncreseStockRequest;
+        message IncreaseStockProcedureResponse msgIncreaseStockResponse;
+        message ComponentAvailable msgComponentAvailable;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("51607020-740f-4b8e-8763-e7068f6a62cf")]
+            activate receive (CheckComponent_ReceivePort.CheckComponent, msgCheckComponent);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3b32bcb1-013a-493d-a946-9ae96aadc71f")]
+            System.Diagnostics.EventLog.WriteEntry("Inventory Debug","ReceivedMessage = " + msgCheckComponent.Category + " " + msgCheckComponent.Option); 
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c28b120e-3038-400c-921e-667fa0f46e68")]
+            construct MsgCheckStockRequest
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("290b25e6-04e0-4729-a300-4fbc65ca2d94")]
+                transform (MsgCheckStockRequest.parameters) = Inventory.CheckStockTransform (msgCheckComponent);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("bf08f5c0-a4c3-4793-9714-def29b748665")]
+            send (CheckStock_SQLPort.CheckStock, MsgCheckStockRequest);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3c3389bf-fbeb-4aed-89e7-2ed6b6d6e9d8")]
+            receive (CheckStock_SQLPort.CheckStock, msgCheckStockResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("81d179ce-6a6f-4fab-81a6-010522867460")]
+            construct msgOrderComponentRequest
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("dd12c158-34d4-41cf-8ca4-e9f12fb11bed")]
+                transform (msgOrderComponentRequest) = Inventory.OrderComponentTransform (msgCheckComponent, msgCheckStockResponse.parameters);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("868b69ab-0857-40d4-87fb-e6355b656980")]
+            System.Diagnostics.EventLog.WriteEntry("Inventory Debug","Component = " + msgOrderComponentRequest.PurchaseNumber + " " + msgOrderComponentRequest.ComponentInfo.Category + " " + msgOrderComponentRequest.ComponentInfo.Option + " " + msgOrderComponentRequest.Quantity);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("de404dd8-7d6c-4cba-b308-fcff3a21256c")]
+            send (OrderComponent_SendPort.OrderComponent, msgOrderComponentRequest, initialize Correlation_2);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5e26f34a-6d4d-4b06-b183-29878fc031fb")]
+            receive (ShippingNotice_ReceivePort.ShippingNotice, msgShippingNotice, Correlation_2);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("adb7e685-0bd8-4d37-9043-2089845685fe")]
+            construct msgIncreseStockRequest
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("75e4d5e0-b855-45e1-975f-cc343be6ef30")]
+                transform (msgIncreseStockRequest.parameters) = Inventory.CheckComponentTransform (msgCheckComponent);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4a4b7623-3c08-48b7-91cf-e9c6137bc970")]
+            send (IncreaseStock_SQLPort.IncreaseStock, msgIncreseStockRequest);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6d48dbb7-3009-4785-a5a6-5bdb06e43d12")]
+            receive (IncreaseStock_SQLPort.IncreaseStock, msgIncreaseStockResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("18367104-3263-4450-8f84-5df1694043c8")]
+            construct msgComponentAvailable
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("91b11d87-1f43-4235-8fc0-d2445812cd2c")]
+                transform (msgComponentAvailable) = Inventory.ComponentAvailableTransform (msgCheckComponent, msgCheckStockResponse.parameters);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b4aa09ba-e22b-4098-981b-5082cb8e2514")]
+            send (ComponentAvailable_SendPort.ComponentAvailable, msgComponentAvailable);
+        }
+    }
+}
+

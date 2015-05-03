@@ -1,0 +1,72 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="e22e696d-a3cc-4d1c-9b3e-8e6fa0016527" LowerBound="1.1" HigherBound="24.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Production.localhost.InventoryService_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://localhost/Inventory/InventoryService.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Production.localhost.InventoryService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="2813b340-4afc-4347-aadb-34623b59f010" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="DecreaseStock" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DecreaseStock_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="95440591-fa99-4668-b9bc-72d01a8e9346" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="category" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="c5a2c7b8-a6ed-4291-b01d-8f0ba996c6b9" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="option" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="72a78e1c-86f2-4f48-8bb2-cb8391dd6e27" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="DecreaseStock" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DecreaseStock_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="4d344376-221f-4047-9d07-079754b31f84" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://Inventory/" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://Inventory/")]
+module Production.localhost.InventoryService_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(Production.localhost.InventoryService), "DecreaseStock", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype DecreaseStock_request
+    {
+        body System.String category;
+        System.String option;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(Production.localhost.InventoryService), "DecreaseStock", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype DecreaseStock_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(Production.localhost.InventoryService))]
+    public porttype InventoryService
+    {
+        requestresponse DecreaseStock
+        {
+            Production.localhost.InventoryService_.DecreaseStock_request, Production.localhost.InventoryService_.DecreaseStock_response
+        };
+    };
+}
+
