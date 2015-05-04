@@ -454,10 +454,10 @@
                         <om:Property Name="Name" Value="ConstructCheckComponentMessage" />
                         <om:Property Name="Signal" Value="True" />
                         <om:Element Type="MessageAssignment" OID="5dc6f869-82a4-4bfb-8f8a-66e429ae5b77" ParentLink="ComplexStatement_Statement" LowerBound="162.1" HigherBound="183.1">
-                            <om:Property Name="Expression" Value="index = index + 1;&#xD;&#xA;strIndex = index.ToString();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Option = xpath(msgCustomerOrder,&quot;string(//Component[&quot;+strIndex+&quot;]/Option/text())&quot;);&#xD;&#xA;Category = xpath(msgCustomerOrder,&quot;string(//Component[&quot;+strIndex+&quot;]/Category/text())&quot;);&#xD;&#xA;Identifier = msgCustomerOrder.OrderNumber + strIndex;&#xD;&#xA;&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&quot;Loop Debug&quot;,&quot;Index &quot; + strIndex + &quot; Option &quot; + Option + &quot; Category &quot; + Category + &quot; Identifier &quot; + Identifier);&#xD;&#xA;&#xD;&#xA;emptyXml = new System.Xml.XmlDocument();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;emptyXml.LoadXml(&quot;&lt;ns0:Component xmlns:ns0=\&quot;http://Inventory.CheckComponent\&quot;&gt;&lt;Category&gt;&quot;+ Category +&quot;&lt;/Category&gt;&lt;Option&gt;&quot;+ Option +&quot;&lt;/Option&gt;&lt;Identifier&gt;&quot;+Identifier+&quot;&lt;/Identifier&gt;&lt;/ns0:Component&gt;&quot;);&#xD;&#xA;msgCheckComponent = emptyXml;&#xD;&#xA;&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&quot;Loop Debug&quot;,&quot; Assignment Sucedeed&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                            <om:Property Name="Expression" Value="index = index + 1;&#xD;&#xA;strIndex = index.ToString();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Option = xpath(msgCustomerOrder,&quot;string(//Component[&quot;+strIndex+&quot;]/Option/text())&quot;);&#xD;&#xA;Category = xpath(msgCustomerOrder,&quot;string(//Component[&quot;+strIndex+&quot;]/Category/text())&quot;);&#xD;&#xA;Identifier = msgCustomerOrder.OrderNumber + strIndex;&#xD;&#xA;&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&quot;E-Commerce Loop Debug&quot;,&quot;Index &quot; + strIndex + &quot; Option &quot; + Option + &quot; Category &quot; + Category + &quot; Identifier &quot; + Identifier);&#xD;&#xA;&#xD;&#xA;emptyXml = new System.Xml.XmlDocument();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;emptyXml.LoadXml(&quot;&lt;ns0:Component xmlns:ns0=\&quot;http://Inventory.CheckComponent\&quot;&gt;&lt;Category&gt;&quot;+ Category +&quot;&lt;/Category&gt;&lt;Option&gt;&quot;+ Option +&quot;&lt;/Option&gt;&lt;Identifier&gt;&quot;+Identifier+&quot;&lt;/Identifier&gt;&lt;/ns0:Component&gt;&quot;);&#xD;&#xA;msgCheckComponent = emptyXml;&#xD;&#xA;&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&quot;Loop Debug&quot;,&quot; Assignment Sucedeed&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
                             <om:Property Name="ReportToAnalyst" Value="False" />
                             <om:Property Name="Name" Value="CheckComponentMessageAssignment" />
-                            <om:Property Name="Signal" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
                         </om:Element>
                         <om:Element Type="MessageRef" OID="4e02beff-afd5-41a6-8e25-328f4812d585" ParentLink="Construct_MessageRef" LowerBound="160.27" HigherBound="160.44">
                             <om:Property Name="Ref" Value="msgCheckComponent" />
@@ -568,14 +568,14 @@
                         <om:Property Name="ClassName" Value="E_Commerce.Transform.ShippingOrderTransform" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="ShippingOrderTransform" />
-                        <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessagePartRef" OID="caf41637-db24-4dfa-a1ef-2bab9243b607" ParentLink="Transform_InputMessagePartRef" LowerBound="211.93" HigherBound="211.109">
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="44f0a27f-1080-416d-aeee-006a7871cc9b" ParentLink="Transform_InputMessagePartRef" LowerBound="211.93" HigherBound="211.109">
                             <om:Property Name="MessageRef" Value="msgCustomerOrder" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_5" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="726d19eb-0032-42f8-9793-e073bc9844f9" ParentLink="Transform_OutputMessagePartRef" LowerBound="211.28" HigherBound="211.44">
+                        <om:Element Type="MessagePartRef" OID="4e9593a2-58c5-4dc5-a46d-0a4c87344635" ParentLink="Transform_OutputMessagePartRef" LowerBound="211.28" HigherBound="211.44">
                             <om:Property Name="MessageRef" Value="msgShippingOrder" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_6" />
@@ -812,8 +812,8 @@
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="ShipmentOrderNumber_CorrelationType" />
             <om:Property Name="Signal" Value="True" />
-            <om:Element Type="PropertyRef" OID="b26de656-3e8e-4622-a435-e07b1846281b" ParentLink="CorrelationType_PropertyRef" LowerBound="77.9" HigherBound="77.32">
-                <om:Property Name="Ref" Value="Supplier.PurchaseNumber" />
+            <om:Element Type="PropertyRef" OID="209df0eb-4856-4df5-b44f-0b946d06bc2c" ParentLink="CorrelationType_PropertyRef" LowerBound="77.9" HigherBound="77.29">
+                <om:Property Name="Ref" Value="Supplier.OrderNumber" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="PropertyRef_1" />
                 <om:Property Name="Signal" Value="False" />
@@ -898,7 +898,7 @@ module E_Commerce
     };
     internal correlationtype ShipmentOrderNumber_CorrelationType
     {
-        Supplier.PurchaseNumber
+        Supplier.OrderNumber
     };
     [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
     internal service E_CommerceOrchestration
@@ -992,7 +992,7 @@ module E_Commerce
                     Category = xpath(msgCustomerOrder,"string(//Component["+strIndex+"]/Category/text())");
                     Identifier = msgCustomerOrder.OrderNumber + strIndex;
                     
-                    System.Diagnostics.EventLog.WriteEntry("Loop Debug","Index " + strIndex + " Option " + Option + " Category " + Category + " Identifier " + Identifier);
+                    System.Diagnostics.EventLog.WriteEntry("E-Commerce Loop Debug","Index " + strIndex + " Option " + Option + " Category " + Category + " Identifier " + Identifier);
                     
                     emptyXml = new System.Xml.XmlDocument();
                     

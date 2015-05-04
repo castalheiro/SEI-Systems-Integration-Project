@@ -87,7 +87,7 @@
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="Shipping_CorrelationType" />
             <om:Property Name="Signal" Value="True" />
-            <om:Element Type="PropertyRef" OID="8823ab39-dfdb-4696-b198-b300269a9a2f" ParentLink="CorrelationType_PropertyRef" LowerBound="34.9" HigherBound="34.23">
+            <om:Element Type="PropertyRef" OID="78350fd4-5c61-4741-82b7-f94545af9c23" ParentLink="CorrelationType_PropertyRef" LowerBound="34.9" HigherBound="34.23">
                 <om:Property Name="Ref" Value="Supplier.PurchaseNumber" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="PropertyRef_1" />

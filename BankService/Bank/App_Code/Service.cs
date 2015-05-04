@@ -24,7 +24,7 @@ public class Service : System.Web.Services.WebService
     [WebMethod]
     public string ExecutePayment(String customerCard, String customerName, Double amount)
     {
-        return "Suceeded";
+        return "Suceededed";
     }
 
 }

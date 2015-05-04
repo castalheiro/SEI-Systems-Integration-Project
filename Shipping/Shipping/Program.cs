@@ -13,7 +13,7 @@ namespace Shipping
             {
                 Console.WriteLine("Waiting for message...");
                 
-                string queueName = @".\private$\shipping_input_queue";
+                string queueName = @".\private$\supplier_shipping_input_queue";
                 /*if (!MessageQueue.Exists(queueName)) {
                     Console.WriteLine("The queue does not exist");
                     return;
@@ -42,7 +42,7 @@ namespace Shipping
                 //Console.WriteLine("response: ");
                 //Console.WriteLine(response);
                
-                queueName = @".\private$\shipping_output_queue";
+                queueName = @".\private$\supplier_shipping_output_queue";
                 mq = new MessageQueue(queueName);
                 msg = new Message();
                 StreamWriter writer = new StreamWriter(msg.BodyStream);
