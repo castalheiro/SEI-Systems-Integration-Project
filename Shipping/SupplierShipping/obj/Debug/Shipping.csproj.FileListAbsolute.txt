@@ -1,6 +1,0 @@
-C:\Tutorial\Lessons\Shipping\Shipping\bin\Debug\Shipping.exe.config
-C:\Tutorial\Lessons\Shipping\Shipping\bin\Debug\Shipping.exe
-C:\Tutorial\Lessons\Shipping\Shipping\bin\Debug\Shipping.pdb
-C:\Tutorial\Lessons\Shipping\Shipping\obj\Debug\Shipping.csprojResolveAssemblyReference.cache
-C:\Tutorial\Lessons\Shipping\Shipping\obj\Debug\Shipping.exe
-C:\Tutorial\Lessons\Shipping\Shipping\obj\Debug\Shipping.pdb

@@ -1,5 +1,0 @@
-C:\Tutorial\Lessons\Shipping\SupplierShipping\bin\Debug\SuplierShipping.exe.config
-C:\Tutorial\Lessons\Shipping\SupplierShipping\bin\Debug\SuplierShipping.exe
-C:\Tutorial\Lessons\Shipping\SupplierShipping\bin\Debug\SuplierShipping.pdb
-C:\Tutorial\Lessons\Shipping\SupplierShipping\obj\Debug\SuplierShipping.exe
-C:\Tutorial\Lessons\Shipping\SupplierShipping\obj\Debug\SuplierShipping.pdb

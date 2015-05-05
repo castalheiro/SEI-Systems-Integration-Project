@@ -1,6 +1,0 @@
-C:\Tutorial\Lessons\Shipping\EcommerceShipping\bin\Debug\EcommerceShipping.exe.config
-C:\Tutorial\Lessons\Shipping\EcommerceShipping\bin\Debug\EcommerceShipping.exe
-C:\Tutorial\Lessons\Shipping\EcommerceShipping\bin\Debug\EcommerceShipping.pdb
-C:\Tutorial\Lessons\Shipping\EcommerceShipping\obj\Debug\EcommerceShipping.csprojResolveAssemblyReference.cache
-C:\Tutorial\Lessons\Shipping\EcommerceShipping\obj\Debug\EcommerceShipping.exe
-C:\Tutorial\Lessons\Shipping\EcommerceShipping\obj\Debug\EcommerceShipping.pdb
